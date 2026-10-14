@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>FEXPO ITSEC SUCRE - Trabajo Práctico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h2>Feria FEXPO ITSEC SUCRE</h2>
+</header>
+
+<nav class="tabs">
+    <button class="tab-btn active" onclick="verTab(event, 't1')">1. Carátula</button>
+    <button class="tab-btn" onclick="verTab(event, 't2')">2. Stand 1</button>
+    <button class="tab-btn" onclick="verTab(event, 't3')">3. Stand 2</button>
+    <button class="tab-btn" onclick="verTab(event, 't4')">4. Stand 3</button>
+</nav>
+
+<div class="container">
+
+    <!-- 1. CARÁTULA -->
+    <div id="t1" class="tab-content active">
+        <h3>Datos del Estudiante</h3>
+        <p><strong>Nombre:</strong> Karlex Mauricio Rejas PLata</p>
+        <p><strong>Carrera:</strong> Sistemas Informaticos</p>
+        <p><strong>Materia:</strong> Diseño Web</p>
+        <p><strong>Docente:</strong> Hugo Alvaro Paz</p>
+    </div>
+
+    <!-- 2. STAND 1 -->
+    <div id="t2" class="tab-content">
+        <h3>Stand 1</h3>
+        <p><strong>Emprendimiento:</strong> Kanka </p>
+        <p><strong>Venden:</strong> papas y pipocas</p>
+        <p><strong>Dirección:</strong> no tiene </p>
+        <p><strong>Logo:</strong></p>
+        <img src="https://via.placeholder.com/100" alt="Logo Stand 1" class="img-logo">
+        
+        <p><strong>Fotografías (2 del stand y 1 con ustedes):</strong></p>
+        <div class="img-grid">
+            <img src="imagenes/kanka.jpeg" alt="Foto Stand 1">
+            <img src="imagenes/kanka2.jpeg" alt="Foto Stand 2">
+            <img src="imagenes/kanka3.jpeg" alt="Estudiante en Stand">
+        </div>
+
+        <p><strong>Video de la Entrevista (Máx 20s):</strong></p>
+        <video controls width="300"><source src="imagenes/kankavideo.mp4" type="video/mp4"></video>
+    </div>
+
+    <!-- 3. STAND 2 -->
+    <div id="t3" class="tab-content">
+        <h3>Stand 2</h3>
+        <p><strong>Emprendimiento:</strong> El Rincon Dulce</p>
+        <p><strong>Venden:</strong> mini donas y postres</p>
+        <p><strong>Dirección:</strong> solo a domicilio</p>
+        <p><strong>Logo:</strong></p>
+        <img src="https://via.placeholder.com/100" alt="Logo Stand 2" class="img-logo">
+        
+        <p><strong>Fotografías:</strong></p>
+        <div class="img-grid">
+            <img src="imagenes/rincon.jpeg" alt="Foto Stand 1">
+            <img src="imagenes/rincon2.jpeg" alt="Foto Stand 2">
+            <img src="https://via.placeholder.com/220x140" alt="Estudiante en Stand">
+        </div>
+
+        <p><strong>Video de la Entrevista (Máx 20s):</strong></p>
+        <video controls width="300"><source src="video2.mp4" type="video/mp4"></video>
+    </div>
+
+    <!-- 4. STAND 3 -->
+    <div id="t4" class="tab-content">
+        <h3>Stand 3</h3>
+        <p><strong>Emprendimiento:</strong> Agumi</p>
+        <p><strong>Venden:</strong> Tejidos y regalos </p>
+        <p><strong>Dirección:</strong> a domicilio</p>
+        <p><strong>Logo:</strong></p>
+        <img src="https://via.placeholder.com/100" alt="Logo Stand 3" class="img-logo">
+        
+        <p><strong>Fotografías:</strong></p>
+        <div class="img-grid">
+            <img src="imagenes/agumi.jpeg" alt="Foto Stand 1">
+            <img src="imagenes/agumi2.jpeg" alt="Foto Stand 2">
+            <img src="imagenes/agumi3.jpeg" alt="Estudiante en Stand">
+        </div>
+
+        <p><strong>Video de la Entrevista (Máx 20s):</strong></p>
+        <video controls width="300"><source src="video3.mp4" type="video/mp4"></video>
+    </div>
+
+</div>
+
+<footer>ITSEC SUCRE - 2026</footer>
+
+<script>
+    function verTab(e, id) {
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+        e.currentTarget.classList.add('active');
+    }
+</script>
+
+</body>
+</html>
